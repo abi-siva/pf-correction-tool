@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Power Factor Correction Tool</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Power Factor Correction Calculator</h1>
+
+    <label for="voltage">Nominal Voltage (V):</label>
+    <input type="number" id="voltage" /><br />
+
+    <label for="numLoads">Number of Loads:</label>
+    <input type="number" id="numLoads" /><br />
+
+    <button onclick="generateLoadInputs()">Enter Load Details</button>
+
+    <div id="loadInputs"></div>
+
+    <label for="requiredPF">Required Power Factor:</label>
+    <input type="number" id="requiredPF" step="0.01" /><br />
+
+    <button onclick="calculate()">Calculate</button>
+
+    <h2>Results:</h2>
+    <pre id="results"></pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>

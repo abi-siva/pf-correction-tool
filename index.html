@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Power Factor Correction Tool</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <h1>Power Factor Correction Calculator</h1>
+<head>
+  <title>Power Factor Correction Calculator</title>
+</head>
+<body>
+  <h2>Power Factor Correction Calculator</h2>
 
-    <label for="voltage">Nominal Voltage (V):</label>
-    <input type="number" id="voltage" /><br />
+  Voltage (V): <input type="number" id="voltage"><br>
+  Number of Loads: <input type="number" id="numLoads">
+  <button onclick="generateLoadInputs()">Enter Load Details</button><br><br>
 
-    <label for="numLoads">Number of Loads:</label>
-    <input type="number" id="numLoads" /><br />
+  <div id="loadInputs"></div>
 
-    <button onclick="generateLoadInputs()">Enter Load Details</button>
+  Required Power Factor: <input type="number" id="requiredPF" step="0.01"><br><br>
+  <button onclick="calculate()">Calculate</button><br><br>
 
-    <div id="loadInputs"></div>
+  <pre id="results"></pre>
 
-    <label for="requiredPF">Required Power Factor:</label>
-    <input type="number" id="requiredPF" step="0.01" /><br />
-
-    <button onclick="calculate()">Calculate</button>
-
-    <h2>Results:</h2>
-    <pre id="results"></pre>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
